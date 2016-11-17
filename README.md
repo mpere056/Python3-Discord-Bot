@@ -1,2 +1,18 @@
 # Python3-Discord-Bot
-A multipurpose discord bot I made using discord.py
+This is a multipurpose discord bot I made using discord.py and various other libraries
+
+Here's what the bot can do
+
+- Screenshot Messages
+
+- Screenshot Webpages
+
+- Assign roles
+
+- Execute bash commands
+
+- Return osu signatures
+
+- Greentext
+
+- Kick people
