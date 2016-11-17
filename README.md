@@ -1,13 +1,12 @@
 # Python3-Discord-Bot
-This is a multipurpose discord bot I made using discord.py and various other libraries
+This is a multipurpose discord bot I made using discord.py and various other libraries.
+The main purpose of my bot is to learn how I can use my linux based vps with my bot.
 
-Here's what the bot can do:
+Here's what the bot can do so far:
 
 - Screenshot Messages
-  - Test
   
 - Screenshot Webpages
-  - Some more tests
   
 - Assign roles
 
