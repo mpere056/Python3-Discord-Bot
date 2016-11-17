@@ -4,10 +4,10 @@ This is a multipurpose discord bot I made using discord.py and various other lib
 Here's what the bot can do:
 
 - Screenshot Messages
-  Test
+  - Test
   
 - Screenshot Webpages
-  Some more tests
+  - Some more tests
   
 - Assign roles
 
