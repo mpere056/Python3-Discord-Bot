@@ -17,31 +17,31 @@ admins = [] # List of users with access to certain commands
 #Send an image of the discord message specified
 #Thanks to RandomPhobia
 def screenshot_message(message):
-		tempk = message.content.split(" ")
-		templ = "https://discordapp.com/channels/" + str(message.server.id) + "/" + str(message.channel.id)
-		browser.get(templ)
-		sleep(1)
-		#element = browser.find_element_by_id('yt-masthead-logo-fragment') # find part of the page you want image of
-		elements = browser.find_elements_by_css_selector(".message-group.hide-overflow")
-		if (message.content == "test1"):
-			element = elements[len(elements)-1]
-		else:
-			element = elements[len(elements)-1-int(tempk[1])]
-		location = element.location
-		size = element.size
-		browser.save_screenshot('screenshot.png') # saves screenshot of entire page
-		#browser.quit()
+	tempk = message.content.split(" ")
+	templ = "https://discordapp.com/channels/" + str(message.server.id) + "/" + str(message.channel.id)
+	browser.get(templ)
+	sleep(1)
+	#element = browser.find_element_by_id('yt-masthead-logo-fragment') # find part of the page you want image of
+	elements = browser.find_elements_by_css_selector(".message-group.hide-overflow")
+	if (message.content == "test1"):
+		element = elements[len(elements)-1]
+	else:
+		element = elements[len(elements)-1-int(tempk[1])]
+	location = element.location
+	size = element.size
+	browser.save_screenshot('screenshot.png') # saves screenshot of entire page
+	#browser.quit()
 
-		im = Image.open('screenshot.png') # uses PIL library to open image in memory
+	im = Image.open('screenshot.png') # uses PIL library to open image in memory
 
-		left = location['x']
-		top = location['y']
-		right = location['x'] + size['width']
-		bottom = location['y'] + size['height']
+	left = location['x']
+	top = location['y']
+	right = location['x'] + size['width']
+	bottom = location['y'] + size['height']
 
-		im = im.crop((left, top, right, bottom)) # defines crop points
-		im.save('screenshot.png')
-		yield from client.send_file(message.channel, "screenshot.png")
+	im = im.crop((left, top, right, bottom)) # defines crop points
+	im.save('screenshot.png')
+	yield from client.send_file(message.channel, "screenshot.png")
 
 
 #Send an image of an osu signature
